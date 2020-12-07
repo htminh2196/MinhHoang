@@ -2,6 +2,16 @@
 <html lang="vi">
 <head>
 <title>Market Research Survey</title>
+<style>
+table{
+border:1px;
+border-collapse:collapse;
+}
+tr:nth-child(odd){background-color:#A9A9A9;}
+th,td{ border: 2px solid #dddddd;
+text align:left;
+padding:8px;
+</style>
 </head>
 <body>
 <form>
@@ -44,16 +54,15 @@
 <input type="radio" name="rd" value="Monthly">
 <label for="Monthly">Monthly</label>
 </p>
-<p>What would you pay for the new product?<br>
-$<input type="text" size="5"<span>.</span><input type="text" size="1">
+<p style="margin:0px;">What would you pay for the new product?<br>
+$<input type="text" size="5"<span>.</span><input type="text" style="width:10px;">
 </p>
+<span style="margin:15px">Dollars</span><span style="margin:10px;">Cents</span>
 <p>
 What features would you like to see in the new product.<br>
-<p>
-<input type="text" name="hypertext" size="100">
-</p>
+<textarea style="height:120px;padding:12px 20px;box-sizing:border-box;font-size:16px;width:70%"></textarea>
 <p>Please rate your level of agreement with the following statements.<br>
-<table border="1">
+<table>
 <tr>
 <td></td>
 <td>Strongly Disagree</td>
