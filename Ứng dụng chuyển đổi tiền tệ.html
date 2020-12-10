@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        table {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <td>
+            <input type="number" id="amount" name="amount"></td>
+        <td>
+            <select>
+                <option id="mycurrency1" onchange="mychange(0)">VND</option>
+                <option id="mycurrency2" onchange="mychange(1)">USD</option>
+            </select>
+        </td>
+        <td>
+            <select>
+                <option id="mycurrencya" onchange="mychange(10)">USD</option>
+                <option id="mycurrencyb" onchange="mychange(11)">VND</option>
+            </select>
+        </td>
+        <td>
+            <input type="button" value="Convert" onclick="myclick()" style="color:white;background-color: blue; border:1px;" >
+        </td>
+        </tr>
+    </table>
+    <p id="myresult" style="color:blue;";></p>
+    <script>
+        function mychange(){
+            let a = document.getElementById("amount").value;
+            a = parseFloat(a);
+            return a;
+        }
+        function myclick(){
+            let b =mychange();
+            if(mychange == 0 && mychange == 10)
+            {
+                document.getElementById("myresult").innerHTML="result: " + (b/23123);
+            }
+        }
+    </script>
+</body>
+
+</html>

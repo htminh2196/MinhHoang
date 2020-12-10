@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+</head>
+
+<body>
+    <h2>Caculator</h2>
+    <table>
+        <tr>
+            <td colspan="2">
+                <input type="number" id="mynumber1" name=" mynumber1">
+            </td>
+            <td colspan="2">
+                <input type="number" id="mynumber2" name="mynumber2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Addition(+)" onclick="myclick(0)">
+            </td>
+            <td>
+                <input type="button" value="Subtraction(-)" onclick="myclick(1)">
+            </td>
+            <td>
+                <input type="button" value="Multiplication(X)" onclick="myclick(2)">
+            </td>
+            <td>
+                <input type="button" value="Division(/)" onclick="myclick(3)">
+            </td>
+        </tr>
+    </table>
+    <p id="myresult"></p>
+    <script>
+        function myclick(myclick) {
+            let a = document.getElementById("mynumber1").value;
+            let b = document.getElementById("mynumber2").value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            if(myclick==0)
+            {
+            
+                document.getElementById("myresult").innerHTML = "result: " + (a+b); 
+            }
+            else if(myclick==1)
+            {
+                document.getElementById("myresult").innerHTML ="result: "+ (a-b);
+            }
+            else if(myclick==2)
+            {
+                document.getElementById("myresult").innerHTML ="result: "+ (a*b);
+            }
+            else
+            {
+                document.getElementById("myresult").innerHTML ="result: "+ (a/b);
+            }
+        }
+    </script>
+</body>
+
+</html>

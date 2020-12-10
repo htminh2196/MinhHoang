@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm trung bình 3 môn lý, hoá, sinh</title>
+</head>
+<body>
+    <script>
+        let ly,hoa,sinh;
+        ly = prompt("Nhập vào điểm lý");
+        hoa = prompt("Nhập vào điểm Hoá");
+        sinh = prompt("Nhập vào điểm Sinh");
+        ly = parseFloat(ly);
+        hoa = parseFloat(hoa);
+        sinh =parseFloat(sinh);
+        let tong = (ly + hoa + sinh)
+        document.write("Điểm trung bình của 3 môn = " + (tong/3) + "<br>");
+        document.write("Tổng điểm 3 môn = " + tong);
+        
+    </script>
+</body>
+</html>

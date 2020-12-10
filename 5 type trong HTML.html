@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+    <title>
+        5 type trong HTML
+    </title>
+</head>
+
+<body>
+    <form>
+        <h1>Tel</h1>
+        <label for="phonenumber">Số Điện Thoại:</label>
+        <input type="tel" name="phonenumber" id="phonenumber" placeholder="123-4566-789"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" required><br><br>
+        <small>Mẫu:123-4566-789</small><br><br>
+        <input type="reset" value="Nhập lại"><br><br><br>
+    </form>
+    <hr>
+    <form>
+        <h1>Text</h1>
+        <label for="fullname">Họ Và Tên</label>
+        <input type="text" name="fullname" id="fullname"><br>
+        <br><input type="reset" value="Nhập lại"><br><br>
+    </form>
+    <hr>
+    <form>
+        <h1>Time</h1>
+        <label for="time">Chọn Thời Gian</label>
+        <input type="time" id="time" name="time"><br><br>
+        <input type="reset"><br><br>
+    </form>
+    <hr>
+    <form>
+        <h1>Week</h1>
+        <label for="week">Chọn Tuần</label>
+        <input type="week" name="week" id="week"><br><br>
+        <input type="reset" value="Đặt lại"><br><br>
+    </form>
+    <hr>
+    <form action="/action_page.php">
+        <h1>URL</h1>
+        <label for="url">Nhập Vào Mã URL: </label>
+        <input type="url" name="url" id="url" placeholder="https://vídụ.com" pattern="https://.*" size="30"
+            required><br><br>
+        <input type="Submit" value="Chuyển Đến">
+    </form>
+</body>
+
+
+</html>
+<textarea cols=30 rows=10></textarea>
+<select style="width:200px";>
+<option value="0" selected disabled>chon so thich</option>
+<option value="1">bong chuyen</option>
+</select>
+<input type="radio " onchange ="document.getElementById('txtOther').type='text'">Other
+<input type="hidden" id="txtOther">
+<button onclick ="document.getElementByID('txtPW').type='text';
+this.innerHTML='hidden'">Show</button>
+<input type="color" onchange="document.getElementBytag"
