@@ -21,37 +21,68 @@
             <th>To Currency</th>
         </tr>
         <td>
-            <input type="number" id="amount" name="amount"></td>
+            <input type="number" id="myamount" name="myamount" onchange="mychange()"></td>
         <td>
-            <select>
-                <option id="mycurrency1" onchange="mychange(0)">VND</option>
-                <option id="mycurrency2" onchange="mychange(1)">USD</option>
+            <select name="select1" id="select1">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
             </select>
         </td>
         <td>
-            <select>
-                <option id="mycurrencya" onchange="mychange(10)">USD</option>
-                <option id="mycurrencyb" onchange="mychange(11)">VND</option>
+            <select name="select2" id="select2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
             </select>
         </td>
         <td>
-            <input type="button" value="Convert" onclick="myclick()" style="color:white;background-color: blue; border:1px;" >
+            <input type="button" value="Convert" onclick="myclick()"
+                style="color:white;background-color: blue; border:1px;">
         </td>
         </tr>
     </table>
-    <p id="myresult" style="color:blue;";></p>
+    <p id="myresult" style="color:blue;" ;></p>
     <script>
-        function mychange(){
-            let a = document.getElementById("amount").value;
-            a = parseFloat(a);
-            return a;
+        function myselect1() {
+            var select1 = document.getElementById("select1").value;
+            return select1;
         }
-        function myclick(){
-            let b =mychange();
-            if(mychange == 0 && mychange == 10)
-            {
-                document.getElementById("myresult").innerHTML="result: " + (b/23123);
+        function myselect2() {
+            var select2 = document.getElementById("select2").value;
+            return select2;
+        }
+        function myclick() {
+            var a = myselect1();
+            var b = myselect2();
+            var mynumber = mychange();
+            var result;
+            switch (a) {
+                case 'VND':
+                    if (b == 'USD') {
+                        result = mynumber / 23000 +" "+" USD";
+                    }
+                    else {
+                        result = mynumber +" "+"VND";
+                    }
+                    break;
+
+                case 'USD':
+                    if (b == 'VND') {
+                        result = mynumber * 23000 +" "+"VND";
+                    }
+                    else {
+                        result = mynumber +" "+"USD" ;
+                    }
+                    break;
+                default:
+                    return result = 'defined';
+                    break;
             }
+
+            document.getElementById('myresult').innerHTML = "result: " + result;
+        }
+        function mychange() {
+            let a = Number(document.getElementById("myamount").value);
+            return a;
         }
     </script>
 </body>
