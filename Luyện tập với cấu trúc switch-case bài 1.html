@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với cấu trúc switch-case Bài 1</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <select id="myselect">
+                    <option value="Edge">Edge</option>
+                    <option value="Chrome">Chrome</option>
+                    <option value="Firefox">Firefox</option>
+                    <option value="Safari">Safari</option>
+                    <option value="IE">Internet Explorer</option>
+                </select>
+            </td>
+           <td><input type="button" value="Chọn Ứng dụng" onclick="myClick()"></td>
+        </tr>
+    </table>
+    <p id="myresult"></p>
+    <script style="align:center;">
+        function mySelect() {
+            var myselect = document.getElementById('myselect').value;
+            return myselect;
+        }
+        function myClick(){
+            var myselect1 = mySelect();
+            switch (myselect1) {
+                case 'Edge':
+                    document.getElementById('myresult').innerHTML="You've got the Edge!";
+                    break;
+                case 'Chrome':
+                case 'Firefox':
+                case 'Safari':
+                document.getElementById('myresult').innerHTML="Okay we support these browsers too";
+                    break;
+                default:
+                document.getElementById('myresult').innerHTML="We hope that this page looks ok!";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

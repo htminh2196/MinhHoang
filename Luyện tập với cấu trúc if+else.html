@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với cấu trúc if-else</title>
+</head>
+<body>
+    <script>
+        var mystring = prompt("Let me Know your name", '');
+        if(mystring =='Admin')
+        {
+            var mypassword= prompt("Let me know your password",'');
+                if(mypassword=="TheMaster")
+                {
+                    alert("Welcome");
+                }
+                else if(mypassword == null)
+                {
+                    alert("Calceled");
+                }
+                else
+                {
+                    alert("Wrong password");
+                }
+        }
+        else if(mystring == null)
+        {
+            alert('canceld')
+        }
+        else
+        {
+            alert("I don't know you");
+        }
+    </script>
+</body>
+</html>
