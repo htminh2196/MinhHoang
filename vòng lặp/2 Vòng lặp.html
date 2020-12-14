@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Vòng lặp lồng nhau</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Dùng vòng lặp for</h1>
+    <p id="myId1";></p>
+    <br>
+    <br>
+    <hr>
+    <h1>Dùng vòng lặp while</h1>
+    <p id="myId2"></p>
+    <script>
+        let myStatus;
+        myStatus="<table border='1' width='300' cellspacing='0' cellpadding='5'>";
+        for(i=1;i<=10;i++)
+        {
+            myStatus+= "<tr>";
+            for(j=1;j<=10;j++)
+            {
+                myStatus+=  "<td>" +i*j +"</td>" ;
+            }
+            myStatus+= "</tr>";
+        }
+        myStatus +="</table>";
+        document.getElementById('myId1').innerHTML=myStatus;
+        let myStatus2;
+        let m= 1;
+        let n = 1;
+        myStatus2="<table border='1' cellpadding='3' cellspacing='0' width='300'>";
+            while(m<=10)
+            {
+                myStatus2+="<tr>";
+                while(n<=10)
+                {
+                    myStatus2+="<td>"+ m*n +"</td>";
+                    n++;
+                }
+                myStatus2+="</tr>"
+                n=1;
+                m++;
+            }
+            myStatus2+="</table>";
+            document.getElementById('myId2').innerHTML=myStatus2;
+
+    </script>
+</body>
+</html>

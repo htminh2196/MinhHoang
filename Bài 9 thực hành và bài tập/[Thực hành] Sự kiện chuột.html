@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Sự kiện chuột</title>
+</head>
+<body>
+    <form>
+        <p>Click the button to replace the football position</p>
+        <img src="football.jpg" id="myFootball" style="width:200px;position: relative;left:0px;"><h1 style="text-align: right;">TouchDown</h1>
+        <br/>
+        <input type="button" onclick="myClick()" value="Click me!" style="position: relative;">
+        
+    </form>
+    <script> 
+        function myClick()
+        {
+            var myClick = document.getElementById("myFootball");
+            myClick.style.left=parseInt(myClick.style.left) + 40 +'px';
+        }
+    </script>
+</body>
+</html>

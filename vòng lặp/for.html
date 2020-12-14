@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng Lặp for</title>
+</head>
+<body>
+    <h1 id="myNumber1">Bài 1<br></h1>
+    
+    <hr>
+    <br>
+    <h1 id="myNumber2">Bài 2<br></h1>
+    <script>
+        
+        for(let i=0;i<5;i++)
+        {
+            document.getElementById('myNumber1').innerHTML +="The number is: " +i +"<br>";
+        }
+        let n = prompt("Nhập vào giá trị n");
+        count = 0;
+        
+        for(j=1;j<n;j++)
+        {
+            count +=j;
+        }
+        document.getElementById('myNumber2').innerHTML +="Tổng các số là: "+ count;
+    </script>
+</body>
+</html>

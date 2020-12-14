@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máy tính đơn giản</title>
+  <style>
+   td{
+     padding:10px;
+     width:20%
+   }
+  </style>
+</head>
+<body>
+  <form>
+    <table style="border:solid black 2px; padding:30px" >
+      <tr>
+        <td colspan="4">
+          <input type="text"  id="myID" padding="20px">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" name="one" value="1" onclick="document.getElementById('myID').value += 1"></td>
+        <td><input type="button" name="two" value="2" onclick="document.getElementById('myID').value += 2"></td>
+        <td><input type="button" name="three" value="3" onclick="document.getElementById('myID').value += 3"></td>
+        <td><input type="button" class="operator" name="plus" value="+" onclick="document.getElementById('myID').value += '+'"></td>
+      </tr>
+      <tr>
+        <td><input type="button" name="four" value="4" onclick="document.getElementById('myID').value += 4"></td>
+        <td><input type="button" name="five" value="5" onclick="document.getElementById('myID').value += 5"></td>
+        <td><input type="button" name="six" value="6" onclick="document.getElementById('myID').value += 6"></td>
+        <td><input type="button" class="operator" name="minus" value="-" onclick="document.getElementById('myID').value += '-'"></td>
+      </tr>
+      <tr>
+        <td><input type="button" name="seven" value="7" onclick="document.getElementById('myID').value += 7"></td>
+        <td><input type="button" name="eight" value="8" onclick="document.getElementById('myID').value += 8"></td>
+        <td><input type="button" name="nine" value="9" onclick="document.getElementById('myID').value += 9"></td>
+        <td><input type="button" class="operator" name="times" value="x" onclick="document.getElementById('myID').value += '*'"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="operator" id="clear" name="clear" value="C" onclick="document.getElementById('myID').value = ''"></td>
+        <td><input type="button" class="operator" name="zero" value="0" onclick="document.getElementById('myID').value += '0'"></td>
+        <td><input type="button" class="operator" name="doit" value="=" onclick="document.getElementById('myID').value = eval(document.getElementById('myID').value)"></td>
+        <td><input type="button" class="operator" name="div" value="/" onclick="document.getElementById('myID').value += '/'"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

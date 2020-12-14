@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+
+    <script>
+        for(let n=0;n<=71;n++)
+        {
+            let count=0;
+            {
+                for(let i=2;i<=Math.sqrt(n);i++)
+                {
+                    if(n%i==0)
+                    {
+                        count++;
+                    }
+                }
+                if(count==0 && n>1)
+                {
+                    document.write("Số nguyên tố là: " + n +"<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

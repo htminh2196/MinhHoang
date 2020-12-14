@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dãy fibonacci</title>
+</head>
+<h1>Bài 1</h1>
+<p id="myId1"></p>
+<br>
+<br>
+<hr>
+<h1>Bài 2</h1>
+<p id="myId2"></p>
+<br>
+<br>
+<hr>
+<h1>Bài 3</h1>
+<p id="myId3"></p>
+<body>
+    <script>
+        var f0 = 0;
+        var f1 = 1;
+        var fn;
+        document.getElementById('myId1').innerHTML= f0 +"<br>" + f1 + "<br>";
+        for (let i = 0; i < 18; i++) 
+        {
+            fn = f0 + f1;
+            document.getElementById('myId1').innerHTML+=fn +"<br>";
+            f0 = f1;
+            f1 = fn;
+        }  
+        /////////////////////////////////
+        var f0 = 0;
+        var f1 = 1;
+        var fn;
+        for(i=0;i<10;i++)
+        {
+            fn=f0+f1
+            {
+                if(fn%5==0)
+                {
+                    document.getElementById('myId2').innerHTML="Số fibonacci đầu tiên chia hết cho 5 là: "+ fn;
+                    break;
+                }
+                else
+                {
+                    f0=f1;
+                    f1=fn;
+                }
+            }
+        }
+        ////////////////////////////////
+        var f0=0;
+        var f1=1;
+        var fn;
+        var sum = 0;
+        for(let i=0;i<18;i++)
+        {
+            fn=f0+f1;
+            sum += fn;
+            document.getElementById('myId3').innerHTML = "Tổng giá trị của 20 số fibonacci đầu tiên: " + (sum + 1);
+            f0=f1;
+            f1=fn;
+        }
+       
+        
+    </script>
+</body>
+
+</html>

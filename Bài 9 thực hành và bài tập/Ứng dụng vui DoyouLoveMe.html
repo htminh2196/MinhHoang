@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="position: absolute; top: 200px; left: 175px">Do You Love Me?</h1>
+        <button onclick="myClick()" style="position: absolute; top: 285px; left :235px">YES</button>
+        <button style="position: absolute; top :285px; left :300px" onmouseover="myMouseOver()" id="myMouse">NO</button>
+    </div>
+    <script>
+        function myClick(){
+            alert("Yes, you are right!");
+        }
+        function myMouseOver(){
+            var x = Math.round(Math.random()*window.innerWidth);
+            var y = Math.round(Math.random()*window.innerHeight);
+            document.getElementById('myMouse').style.left = x +'px';
+            document.getElementById('myMouse').style.top = y +'px';
+        }
+    </script>
+</body>
+</html>

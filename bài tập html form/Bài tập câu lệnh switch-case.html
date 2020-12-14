@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập câu lệnh switch-case</title>
+</head>
+<body>
+    <table style="border:solid black 1px">
+        <tr>
+            <td>
+                <input type="number" id="myNumber1" onchange="myChange1()">
+            </td>
+            <td>
+                <input type="button" value="Tính số ngày" onclick="myClick1()">
+            </td>
+        </tr>
+        <tr>
+            <td id="myResult1"></td>
+            <tr>
+            <td>Và</td></tr>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="myNumber2" onchange="myChange2()">
+            </td>
+            <td>
+                <input type="button" value="Tính số ngày" onclick="myClick2()">
+            </td>
+        </tr>
+        <tr>
+            <td id="myResult2"></td>
+        </tr>
+    </table>
+    <script>
+        function myChange1(){
+            let myValue1 = Number(document.getElementById("myNumber1").value);
+            return myValue1;
+        }
+        function myChange2(){
+            let myValue2 =Number(document.getElementById("myNumber2").value);
+            return myValue2;
+        }
+        function myClick1(){
+            let myValue1 = myChange1();
+            switch(myValue1){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                document.getElementById('myResult1').innerHTML='có 31 ngày';
+                break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                document.getElementById('myResult1').innerHTML='có 30 ngày';
+                break;
+                case 2:
+                document.getElementById('myResult1').innerHTML='có thể có 28 hoặc 29 ngày tùy theo năm';
+                break;
+                default:
+                document.getElementById('myResult1').innerHTML='Mời nhập lại số tháng theo stt';
+                break;
+            }
+        }
+        function myClick2(){
+            let myValue2 = myChange2();
+            switch(myValue2){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                document.getElementById('myResult2').innerHTML='có 31 ngày';
+                break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                document.getElementById('myResult2').innerHTML='có 30 ngày';
+                break;
+                case 2:
+                document.getElementById('myResult2').innerHTML='có thể có 28 hoặc 29 ngày tùy theo năm';
+                break;
+                default:
+                document.getElementById('myResult2').innerHTML='Mời nhập lại số tháng theo stt';
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
