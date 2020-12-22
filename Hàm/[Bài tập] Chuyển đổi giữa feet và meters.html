@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        th,
+        td {
+            border: solid black 1px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Feet</th>
+            <th>Meters</th>
+            <th>Meter</th>
+            <th>Feets</th>
+        </tr>
+        <tr>
+            <td><input type="Number" id="myValue" oninput="myInput()" style="width: 99%;"></td>
+            <td >
+                <p id="myResult"></p>
+            </td>
+            <td><input type="Number" id="myValue2" oninput="myInput2()" style="width:99%;"></td>
+            <td>
+                <p id="myResult2"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function myInput() {
+        let myValue = document.getElementById('myValue').value;
+  
+        let myResultValue = myValue * 0.305;
+   
+        document.getElementById('myResult').innerHTML =myResultValue;
+    }
+    function myInput2() {
+        let myValue2 = document.getElementById('myValue2').value;
+  
+        let myResultValue2 = myValue2 * 3.279;
+   
+        document.getElementById('myResult2').innerHTML =myResultValue2;
+    }
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <p><b>Type a value in the Fahrenheit field to covert the value to Celcius:</b></p>
+    <p><strong>Fahrenheit</strong><input type="number" id="myValue" oninput="myInput()" onchange="myInput()"></p>
+    <p id="myResult"></p>
+    <script>
+        function myInput(){
+        let myValueOut = document.getElementById('myValue').value;
+        let myCalculate = (myValueOut-32)/1.8;
+        document.getElementById('myResult').innerHTML = "<b>Celcius: "+myCalculate;
+    
+    }
+    </script>
+</body>
+</html>

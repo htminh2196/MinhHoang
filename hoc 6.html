@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border
+        {
+            width: 60px;
+            height: 60px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body onload=startGame()>
+    <table border="1">
+        <h1>Welcome to my tic tac toe game</h1>
+        <p id="myMessage"></p>
+        <tr>
+            <td id="s1" class="border" onclick="myClick(this)"></td>
+            <td id="s2" class="border" onclick="myClick(this)"></td>
+            <td id="s3" class="border" onclick="myClick(this)"></td>
+        </tr>
+        <tr>
+            <td id="s4" class="border" onclick="myClick(this)"></td>
+            <td id="s5" class="border" onclick="myClick(this)"></td>
+            <td id="s6" class="border" onclick="myClick(this)"></td>
+        </tr>
+        <tr>
+            <td id="s7" class="border" onclick="myClick(this)"></td>
+            <td id="s8" class="border" onclick="myClick(this)"></td>
+            <td id="s9" class="border" onclick="myClick(this)"></td>
+        </tr>
+    </table>
+    <a href="javascript:startGame()">Start Over</a>
+    <script>
+        function startGame()
+        {
+            for(i=1;i<=9;i++)
+            {
+                clearBox(i);
+            }
+            if(Math.random<0.5)
+            {
+                document.turn="O";
+            }
+            else
+            {
+            document.turn ="X";
+            }
+            document.winner = null;
+            setMessage(document.turn + " play first")
+        }
+        function setMessage(msg)
+        {
+            document.getElementById("myMessage").innerText = msg;
+        }
+        function myClick(myClick)
+        {
+           if(document.winner!=null)
+           {
+               setMessage(document.winner+" already won the game");
+           }
+            else if(myClick.innerText=="")
+            {
+            myClick.innerText = document.turn;
+            switchTurn();
+            }
+            else
+            {
+                setMessage("It's already used")
+            }
+        }
+        
+        function switchTurn()
+        {
+            if(checkForWinner(document.turn))
+            {
+                setMessage(document.turn + " Win the game");
+                document.winner= document.turn;
+            }
+            else if(document.turn =="X")
+            {
+                document.turn ="O";
+                setMessage("It's " + document.turn +"'s turn");
+            }
+            else
+            {
+                document.turn ="X";
+                setMessage("It's " + document.turn +"'s turn");
+            }
+            
+        }
+        function checkRow(a,b,c,move)
+        {
+            var result = false;
+            if(getBox(a)== move && getBox(b)== move && getBox(c)==move)
+            {
+                result = true;
+            } 
+            return result;
+        }
+        function getBox(number)
+        {
+            return document.getElementById("s"+number).innerText;
+        }
+        function checkForWinner(move)
+        { 
+            var result = false;
+            if(
+                checkRow(1,2,3,move)||
+                checkRow(4,5,6,move)||
+                checkRow(7,8,9,move)||
+                checkRow(1,4,7,move)||
+                checkRow(2,5,8,move)||
+                checkRow(1,5,9,move)||
+                checkRow(3,5,7,move)||
+                checkRow(3,6,9,move)
+                )
+                {
+                    result = true;
+                }
+                return result;
+        }
+        function clearBox(number)
+        {
+            document.getElementById("s"+number).innerText="";
+        }
+    </script>
+</body>
+
+</html>

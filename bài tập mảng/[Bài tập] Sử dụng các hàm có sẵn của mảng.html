@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+
+<body>
+    <script>
+        let myColor = ["Red", "Green", "White", "Black"];
+        document.write(myColor.join());
+        document.write('<br/>')
+
+      
+      
+        let n = prompt("Nhập vào giá trị của chuỗi số n");
+        let arr = n.toString();
+        let myResult = [arr[0]];
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0 && arr[i - 1] % 2 === 0) {
+                myResult.push('-', arr[i]);
+            }
+            else {
+                myResult.push(arr[i]);
+            }
+        }
+        document.write(myResult.join(''))
+        document.write('<br/>')
+
+
+
+        let upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
+        let myLetter = prompt("Nhập vào bất kỳ ký tự nào ");
+        let arr = [];
+        for (let i = 0; i < myLetter.length; i++) {
+            if (upperLetters.indexOf(myLetter[i]) >= 0) {
+                arr.push(myLetter[i].toLowerCase());
+            }
+            else if (lowerLetters.indexOf(myLetter[i] >= 0)) {
+                arr.push(myLetter[i].toUpperCase());
+            }
+            else {
+                arr.push(myLetter[i]);
+            }
+        }
+        document.write(arr.join(''))
+    </script>
+</body>
+
+</html>

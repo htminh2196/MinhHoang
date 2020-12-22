@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//    1,converting Array to string
+       // for(let i=0;i<fruits.length;i++)
+        // {
+        //     document.write(fruits[i]);
+        //     if(i+1<fruits.length)
+        //     {
+        //         document.write("*");
+        //     }
+        // }
+        // document.write("<br/>");
+
+
+//      2,Popping
+        // fruits[fruits.length-1] = [];
+        // document.write(fruits);
+        
+            
+
+
+
+//      3,Pushing
+        // fruits[fruits.length] =["Potato"];
+        // document.write(fruits);
+        // document.write("<br/>");
+
+
+//      4,Shifting
+        // fruits[0] = [];
+        // document.write(fruits);
+        // document.write("<br/>");
+
+
+ //    5,Unshifting
+            for(let i =0;i<fruits.length;i++)
+            {
+                fruits[i+=1];
+            
+            
+            }
+            fruits[0] = "Potato";
+            document.write(fruits);
+            // document.write("<br/>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Đổi Hình</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body onload="startGame()">
+    <h1 id="myMessage" style="padding-left: 20%;"></h1>
+    <img id="myFullImage" src="" alt="">
+    <table border="1" id="myTableOut">
+        <tr>
+            <td><img src="football.jpg" id="myId1" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+            <td><img src="football.jpg" id="myId2" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+            <td><img src="football.jpg" id="myId3" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+            <td><img src="football.jpg" id="myId4" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+        </tr>
+        <tr>
+            <td><img src="football.jpg" id="myId5" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+            <td><img src="football.jpg" id="myId6" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+            <td><img src="football.jpg" id="myId7" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+            <td><img src="football.jpg" id="myId8" onclick="myClick(this)" style="width: 200px; height: 200px;"></td>
+        </tr>
+    </table>
+    <img src="field goal.jpg" style="width: 820px; height: 400px;">
+    <script>
+        function startGame() {
+            setMessage("Bắt đầu cuộc chơi")
+        }
+        function setMessage(msg) {
+            document.getElementById("myMessage").innerText = msg;
+        }
+        function myClick(myClick) {
+            var myImages = ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png"];
+            let luckyNumber = Math.floor(Math.random() * myImages.length);        
+            let text = '';          
+            let finish1 = false;
+            let finish2 = false;
+            let finish3 = false;
+            let finish4 = false;
+            let finish5 = false;
+            let finish6 = false;
+            let finish7 = false;
+            let finish8 = false;
+            switch (myClick.id) {
+
+                case 'myId1':
+                    document.getElementById("myId1").src = myImages[luckyNumber];
+                    text = document.getElementById("myId1").src;
+                    if (text = text.substr(-10, 10) === 'image1.png') {
+                        myfinish = true;
+                    }
+                    break;
+                case 'myId2':
+                    document.getElementById("myId2").src = myImages[luckyNumber];
+                    text = document.getElementById("myId2").src;
+                    if (text = text.substr(-10, 10) === 'image2.png') {
+                        myfinish2 = true;
+                    }
+                    break;
+                case 'myId3':
+                    document.getElementById("myId3").src = myImages[luckyNumber];
+                    text = document.getElementById("myId3").src;
+                    if (text = text.substr(-10, 10) === 'image3.png') {
+                        myfinish3 = true;
+                    }
+                    break;
+
+                case 'myId4':
+                    document.getElementById("myId4").src = myImages[luckyNumber];
+                    text = document.getElementById("myId4").src;
+                    if (text = text.substr(-10, 10) === 'image4.png') {
+                        myfinish4 = true;
+                    }
+                    break;
+
+                case 'myId5':
+                    document.getElementById("myId5").src = myImages[luckyNumber];
+                    text = document.getElementById("myId5").src;
+                    if (text = text.substr(-10, 10) === 'image5.png') {
+                        myfinish5 = true;
+                    }
+                    break;
+
+                case 'myId6':
+                    document.getElementById("myId6").src = myImages[luckyNumber];
+                    text = document.getElementById("myId6").src;
+                    if (text = text.substr(-10, 10) === 'image6.png') {
+                        myfinish6 = true;
+                    }
+                    break;
+
+                case 'myId7':
+                    document.getElementById("myId7").src = myImages[luckyNumber];
+                    text = document.getElementById("myId7").src;
+                    if (text = text.substr(-10, 10) === 'image7.png') {
+                        myfinish7 = true;
+                    }
+                    break;
+
+                case 'myId8':
+                    document.getElementById("myId8").src = myImages[luckyNumber];
+                    text = document.getElementById("myId8").src;
+                    if (text = text.substr(-10, 10) === 'image8.png') {
+                        myfinish8 = true;
+                    }
+                    break;
+            }
+            if (myfinish == true && myfinish2==true && myfinish3 == true && myfinish4==true && myfinish5==true && myfinish6==true && myfinish7==true && myfinish8==true)
+            {
+             
+                    alert("You Win!");
+                document.getElementById("myTableOut").innerHTML="";
+               
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

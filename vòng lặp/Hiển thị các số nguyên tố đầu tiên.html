@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiển thị các số nguyên tố đầu tiên</title>
+    <title>Các số nguyên tố đầu tiên</title>
+    <style>
+        tr,td{
+            border: solid black 1px;
+        }
+        table{
+            
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
 
+<body>
+    <input type="number" id="myValue" placeholder="Nhập vào số lượng số nguyên tố cần tính" style="width: 300px;">
+    <input type="button" onclick="myClick()" value="Chọn">
+    <table id="myId">
+
+    </table>
+    
     <script>
-        for(let n=0;n<=71;n++)
-        {
-            let count=0;
-            {
-                for(let i=2;i<=Math.sqrt(n);i++)
-                {
-                    if(n%i==0)
-                    {
-                        count++;
-                    }
-                }
-                if(count==0 && n>1)
-                {
-                    document.write("Số nguyên tố là: " + n +"<br>");
+        function myClick(){
+        let text = " ";
+        text += "<tr>";
+           let  n = document.getElementById('myValue').value;
+        for (m = 2, k = 0; k < n; m++) {
+            let count = 0;
+            for (i = 2; i <= Math.sqrt(m); i++) {
+                if (m % i == 0) {
+                    count++;
                 }
             }
+            if (count == 0 && m > 1) {
+                let r = Math.floor(Math.random() * 256);
+                let y = Math.floor(Math.random() * 256);
+                let b = Math.floor(Math.random() * 256);
+                text += '<td style="color: ryb(' + r + ',' + y + ',' + b + ');">' + m + '</td>';
+                k++;
+                if (k % 20 == 0) text += "</tr>" + "<tr>";
+            }
+            document.getElementById("myId").innerHTML = text;
         }
+        text += "</tr>"
+    }
     </script>
 </body>
+
 </html>

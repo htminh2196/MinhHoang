@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Từ điển</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+    <h1>Hệ Thống Tra Cứu Tiếng Anh</h1>
+    <input type="text" id="myText">
+    <input type="button" onclick="myClick()" value="tra cứu">
+    <input type="reset" value="Nhập lại">
+    <p id="myResult"></p>
+</form>
+    <script>
+        function myClick() {
+            let myWords = ["hello", "hi", "goodbye"];
+            let myVieWords = ["xin chào", "chào", "tạm biệt"];
+            let myInput = document.getElementById('myText').value;
+            for (i = 0; i < myInput.length; i++) {
+                if (myInput === myWords[i]) {
+                    document.getElementById('myResult').innerHTML = myVieWords[i];
+                    break;
+                    
+                }
+                else
+                {
+                    document.getElementById('myResult').innerHTML =myInput;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

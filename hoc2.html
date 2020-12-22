@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let array = [1,2,3,4,5,6]
+        // for(let i of array)
+        // {
+        //     if(i%2==0)
+        //     {
+
+        //     document.write(`${i},`);
+        //     console.log(i);
+        //     }
+        // }
+        // for(i=0;i<10;i++)
+        // {
+        //     for(j=0;j<i;j++)
+        //     {
+        //         document.write('*');
+        //     }
+        //     document.write('<br/>');
+        // }
+
+        // let myNumber = parseInt(prompt("Nhập vào 1 số bất kỳ"));
+        // let array = [];
+
+        // for(let i=0;i<myNumber;i++)
+        // {
+        //    array[i]=Math.floor(Math.random()*30 + 20);
+
+        // }
+        // document.write(array+'<br/>');
+
+
+        // let first = 0;
+        // let last = array.length-1;
+        // while(first<last){
+        // let temp = array[first];
+        // array[first] = array[last];
+        // array[last] = temp;
+        // first++;
+        // last--;
+        // }
+        // document.write(array);
+        // let myNumber = parseInt(prompt("Nhập vào 1 số bất kỳ"));
+        // let array = [];
+        // let sum=0;
+        // for(let i=0;i<myNumber;i++)
+        // {
+        //     array[i]=[];
+        //     for(let j=0;j<i;j++)
+        //     {
+        //         array[i][j]=Math.floor(Math.random*30 + 20);
+        //     }
+        // }
+        // for(let i=0;i<myNumber;i++)
+        // {
+        //     for(j=0;j<i;j++)
+        //     {
+        //         document.write(array[i][j] +" ");
+        //     }
+        //     document.write("<br/");
+        // }
+
+        // for(let i=0;i<myNumber;i++)
+        // {
+        //     sum+=array[i][i];
+        // }
+        // document.write(sum);
+        // console.log(sum);
+        //     var output = "";
+        // let i =1;
+        // while(i<=100) {
+        // 	if(i%2==0)
+        // 	{
+        // 		output+=i+",";
+        // 	}
+        // 	i++;
+        // }
+        // console.log(output);
+        // let name = prompt("Nhập vào tên");
+        // let job = prompt("Nhập vào công việc");
+        // function myFirstFunction(name,job)
+        // {
+        //     const person = 
+        //     {
+        //         name: "",
+        //         job: "",
+        //         printIntroduction: function()
+        //         {
+        //             console.log(`My name is: ${this.name} . My job is: ${this.job}`);
+        //         }
+        //     }
+
+        // const myPushObject = Object.create(person);
+        // myPushObject.name = name;
+        // myPushObject.job = job;
+        // myPushObject.printIntroduction();
+
+        //     } 
+        // function  myFunction()
+        // {
+        //     let name =arguments[0];
+        //     let job = arguments[1];
+        //     console.log("My name is: "+ name);
+        //     console.log("My job is: "+job);
+        // }
+        // myFunction("Minh","Mechanic")
+        // function myFunction(multiply)
+        // {
+        //     return multiply*2;
+        // }
+        // let myVariable = 10;
+        // console.log(myFunction(myVariable));
+        // function myFunction(x)
+        // {
+        //     if(x==1)
+        //     {
+        //         return true;
+        //     }
+        //     else
+        //     {
+        //         return false;
+        //     }
+        // }
+        // let myVariable = 1;
+        // console.log(myFunction(myVariable))
+        // function square(x) {
+        //     x = x * 10;
+        //     console.log(x);
+        // }
+        // let y = 10;
+        // square(y)
+//         function swap(a, b) {
+// var temp = a;
+// a = b;
+// b = temp;
+// }
+
+// var c = 5;
+// var d = 10;
+// swap(c, d);
+// document.write("a = " + c + ", b = " + d);
+        let n = parseInt(prompt("Nhập vào n "));
+        let array = [];
+        for(let i=0;i<n;i++)
+        {
+        //    array[i]= Math.floor(Math.random()*(max - min +1)+min);
+           array[i]= Math.floor(Math.random()*(80 - 20 +1) + 20);
+        }
+        document.write(array);
+
+        
+    </script>
+</body>
+
+</html>

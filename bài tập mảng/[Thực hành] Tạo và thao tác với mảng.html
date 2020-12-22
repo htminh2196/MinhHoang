@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo và thao tác với mảng</title>
+</head>
+<body>
+    <p>Simple Screen</p>
+    <br>
+    <input type="Number" id="myValue" >
+    <input type="button" value="Add" onclick="myClick()">
+    <input type="button" value="Display" onclick="myResult()">
+    <p id="myResult"></p>
+    <script>
+        let x = 0;
+        let array = Array();
+        function myClick(){
+            array[x]= document.getElementById("myValue").value;
+            x++;
+            document.getElementById("myValue").value="";
+        }
+        function myResult(){
+            let e ="<hr/>";
+            for(let i =0;i<array.length;i++)
+            {
+                e+="Element " + i +" = " + array[i] +"<br/>";
+            }
+            document.getElementById("myResult").innerHTML = e;
+        }
+        
+        
+    </script>
+
+</body>
+</html>

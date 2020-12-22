@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // function isPrime(n) {
+
+        //     if (n < 2) return false;
+        //     else {
+        //         for (let i = 2; i <= Math.sqrt(n); i++) {
+        //             if (n % i == 0) return false;
+        //         }
+        //         return true;
+        //     }
+        // }
+        // var n = parseInt(prompt("Nhap vao snt"));
+        // for (let i = 2; i <= n; i++) {
+        //     if (isPrime(i) == true) {
+        //         document.write("Số nguyên tố là: " + i +'<br/>');
+        //     }
+           
+        // }
+        var a = 5;
+        var b = 4; 
+        var c = 3;
+        var d = 2;
+        if(a>b && a>c && a>d)
+        {
+            if(b>c && b>d)
+            {
+                if(c>d)
+                {
+                    document.write(a+","+b+","+c+","+d);
+                }
+                else
+                {
+                    document.write(a,b,d,c);
+                }
+            }
+            else if(c>b && c> d)
+            {
+                if(b>d)
+                {
+                    document.write(a,c,b,d);
+                }
+                else
+                {
+                    document.write(a,b,d,b);
+                }
+            }
+            else if(d>b && d>c)
+            {
+                if(b>c)
+                {
+                    document.write(a,d,b,c);
+                }
+                else
+                {
+                    document.write(a,d,c,b);
+                }
+            }
+        }
+        if(b>a && b>c && b>d)
+        {
+            if(a>c && a>d)
+            {
+                if(c>d)
+                {
+                    document.write(b,a,c,d);
+                }
+                else
+                {
+                    document.write(b,a,d,c);
+                }
+            }
+            else if(c>a && c> d)
+            {
+                if(a>d)
+                {
+                    document.write(b,c,a,d);
+                }
+                else
+                {
+                    document.write(b,c,d,a);
+                }
+            }
+            else if(d>a && d>c)
+            {
+                if(a>c)
+                {
+                    document.write(b,d,a,c);
+                }
+                else
+                {
+                    document.write(b,d,c,a);
+                }
+            }
+        }
+        if(c>a && c>b && c>d)
+        {
+            if(a>b && a>d)
+            {
+                if(b>d)
+                {
+                    document.write(c,a,b,d);
+                }
+                else
+                {
+                    document.write(c,a,d,b);
+                }
+            }
+            else if(b>a && b> d)
+            {
+                if(a>d)
+                {
+                    document.write(c,b,a,d);
+                }
+                else
+                {
+                    document.write(c,b,d,a);
+                }
+            }
+            else if(d>a && d>b)
+            {
+                if(a>b)
+                {
+                    document.write(c,d,a,b);
+                }
+                else
+                {
+                    document.write(c,d,b,a);
+                }
+            }
+        }
+        if(d>a && d>c && d>b)
+        {
+            if(a>c && a>b)
+            {
+                if(c>b)
+                {
+                    document.write(d,a,c,b);
+                }
+                else
+                {
+                    document.write(d,a,b,c);
+                }
+            }
+            else if(b>a && b> c)
+            {
+                if(a>c)
+                {
+                    document.write(d,b,a,c);
+                }
+                else
+                {
+                    document.write(d,b,c,a);
+                }
+            }
+            else if(c>a && c>b)
+            {
+                if(a>b)
+                {
+                    document.write(d+","+c,a,b);
+                }
+                else
+                {
+                    document.write(d,c,b,a);
+                }
+            }
+        }
+    </script>
+    </script>
+</body>
+
+</html>
