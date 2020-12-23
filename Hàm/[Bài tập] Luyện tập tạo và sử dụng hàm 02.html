@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+
+<body>
+    <script>
+        // bai 1,
+        // function multiply(number)
+        // {
+        //     return number*number;
+        // }
+        // let number = 10;
+        // multiply(number);
+
+
+        // bai 2,
+        // function Area(R)
+        // {
+        //     let A =0;
+        //     A = Math.PI*R*R;
+        //     return A;
+        // }
+        // function Perimeter(R)
+        // {
+        //     let P=0;
+        //     P = 2*Math.PI*R;
+        //     return P;
+        // }
+        // let number =parseInt(prompt("Nhập vào số bất kỳ"));
+
+        // document.write(Area(number));
+        // document.write("<br/>");
+        // document.write(Perimeter(number));
+
+
+        // bai 3,
+
+
+        // function factorial(number)
+        // {
+        //     let multiply = 1;
+        //     for(i=1;i<=number;i++)
+        //     {
+        //         multiply*=i;
+        //     }
+        //     return multiply;
+        // }
+        // let number = parseInt(prompt("Nhập vào một số bất kỳ"));
+        // document.write(factorial(number));
+
+        // bai 4.
+        // function checkForNumber(n)
+        // {
+        //     let flag = false;
+        //     if(isNaN(n))
+        //     {
+        //         flag = false;
+        //     }
+        //     else
+        //     {
+        //         flag =  true;
+        //     }
+        //     return flag;
+        // }
+        // let number = parseInt(prompt("Nhập vào một số bất kỳ"));
+        // if(checkForNumber(number))
+        // {
+        // document.write("Đây là số: "+number);
+        // }
+        // else
+        // {
+        //     document.write("Đây không phải là số");
+        // }
+
+        // bai 5.
+        // function biggestGuyInTheClass(a,b,c){
+        // let max = 0;
+        // (a>b>c)? (max = a):(b>c)?(max=b):(max = c)
+        // return max;
+        // }
+
+        // let number1=parseInt(prompt("Nhập vào số nguyên thứ 1 bất kỳ"));
+        // let number2=parseInt(prompt("Nhập vào số nguyên thứ 2 bất kỳ"));
+        // let number3=parseInt(prompt("Nhập vào số nguyên thứ 3 bất kỳ"));
+        // document.write(biggestGuyInTheClass(number1,number2,number3));
+
+
+        // bai 6.
+        // function checkForNumberIsInterger(number)
+        // {
+        //    let flag = false;
+
+        //     if(!isNaN(number)&& Number.isSafeInteger(number)&&number >0)
+        //     {
+        //         flag = true;
+        //     }
+        //     else
+        //     {
+        //         flag = false;
+        //     }
+        //     return flag;
+        // }
+        // let number = parseInt(prompt('Nhập vào một số bất kỳ'));
+        // if(checkForNumberIsInterger(number))
+        // {
+        //     document.write("Đây là số nguyên dương");
+        // }
+        // else
+        // {
+        //     document.write("Nhập lại số nguyên dương");
+        // }
+
+        // bai 7
+        // function swapNumber() {
+        //     let number1 = parseInt(prompt("Nhập vào số đầu tiên"));
+        //     let number2 = parseInt(prompt("Nhập vào số thứ 2"));
+        //     let temp = 0;
+        //     temp = number1;
+        //     number1 = number2;
+        //     number2 = temp;
+        //     document.write(number1+","+number2);
+        // }
+        // swapNumber();
+
+        //      bai 8,
+        // let arr=[1,2,3,4,5,6,7,8,9,10];
+        // function myArrayShow()
+        // {
+        //     let first =0;
+        //     let last = arr.length-1;
+
+        //     while(first<last)
+        //     {
+        //     let temp =arr[first];
+        //     arr[first]=arr[last];
+        //     arr[last]=temp;
+        //     first++;
+        //     last--;
+        //     }
+        //     document.write(arr);
+        // }
+        // myArrayShow();
+
+        // bai 9,
+        let array = ['a,b,c,d,e,f,g,h,i,k,l,m,n,o,q,w,e,r,t,y,u'];
+        let myWord = prompt("Nhập vào một ký tự bất kỳ");
+        function checkWordInArray(myWord) {
+            let text = '';
+            let flag = false;
+            if (!isNaN(myWord)) {
+                return false;
+            }
+            else {
+                for (let i = 0; i < array.length; i++)
+                 {
+                    if (myWord === array[i])
+                     {
+                        flag = true;
+                    }
+                }
+                if (flag == true) {
+                    document.write(myWord);
+                }
+                else {
+                    return false;
+                }
+
+            }
+            }
+            checkWordInArray(myWord);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

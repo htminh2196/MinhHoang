@@ -14,7 +14,7 @@
 </head>
 
 <body onload="startGame()">
-    <h1 id="myMessage" style="padding-left: 20%;"></h1>
+    <h1 id="myMessage" style="padding-left: 30%;"></h1>
     <img id="myFullImage" src="" alt="">
     <table border="1" id="myTableOut">
         <tr>
@@ -32,31 +32,29 @@
     </table>
     <img src="field goal.jpg" style="width: 820px; height: 400px;">
     <script>
-        function startGame() {
-            setMessage("Bắt đầu cuộc chơi")
+        function myMessage(msg)
+        {
+            let text = '';
+            text = prompt(`${msg}`);
+            return text;
         }
-        function setMessage(msg) {
-            document.getElementById("myMessage").innerText = msg;
+        function startGame()
+        {
+           let mess =  myMessage("Nhập vào bất kỳ");
+
+            document.getElementById("myMessage").innerText=mess;
         }
         function myClick(myClick) {
             var myImages = ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png"];
             let luckyNumber = Math.floor(Math.random() * myImages.length);        
             let text = '';          
-            let finish1 = false;
-            let finish2 = false;
-            let finish3 = false;
-            let finish4 = false;
-            let finish5 = false;
-            let finish6 = false;
-            let finish7 = false;
-            let finish8 = false;
             switch (myClick.id) {
 
                 case 'myId1':
                     document.getElementById("myId1").src = myImages[luckyNumber];
                     text = document.getElementById("myId1").src;
                     if (text = text.substr(-10, 10) === 'image1.png') {
-                        myfinish = true;
+                        myfinish1 = true;
                     }
                     break;
                 case 'myId2':
@@ -114,18 +112,14 @@
                     }
                     break;
             }
-            if (myfinish == true && myfinish2==true && myfinish3 == true && myfinish4==true && myfinish5==true && myfinish6==true && myfinish7==true && myfinish8==true)
+            if (myfinish1 == true && myfinish2==true && myfinish3 == true && myfinish4==true && myfinish5==true && myfinish6==true && myfinish7==true && myfinish8==true)
             {
-             
+
                     alert("You Win!");
                 document.getElementById("myTableOut").innerHTML="";
-               
+                
             }
         }
-
-
-
-
     </script>
 </body>
 

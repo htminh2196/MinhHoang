@@ -113,20 +113,118 @@
         //     var b = 7;
         //     mySum(myDisplay,a,b);
         // }
-        let M = new Array();
-        for (let i = 0; i < 5; i++) {
-            let A = [];
-            for (let j = 0; j < 5; j++) {
-                // A[j] = 0;
-                A[j] = Math.floor(Math.random * (80 - 20 + 1) + 20)
-            }
-            M[i] = A;
-        }
-            // let array = [];
-            // for(let i =0;i<Array;i++)
-            // {
+        // function getArrayValue(n)
+        // {
+        //     let array =[];
+        //     for(let i=0;i<n;i++)
+        //     {
+        //         array[i] = Math.floor(Math.random()*(90-10+1)+10);
 
-            // }
+        //     }
+        //     return array;
+        // }
+        // function getArraySum(n)
+        // { 
+        //     let sum = 0;
+        //     for(let i of getArrayValue(n))
+        //     sum += i;
+        //     return sum;
+        // }
+        // let n =parseInt(prompt("Nhập vào một số nguyên bất kỳ"));
+        // if(n<=0)
+        // {
+        //     null;
+        // }
+        // else
+        // {
+
+        //     document.write(getArrayValue(n));
+        //     document.write("<br/>")
+        //     document.write(getArraySum(n));
+        // }
+        // function enterNumber(msg)
+        // {
+        //     let number = 0;
+        //     do
+        //     {
+        //         number = Number(prompt(`${msg}: `));
+        //     }
+        //     while(isNaN(number) || !Number.isSafeInteger(number)||number<0)
+        //     return number;
+        // }
+        // function generateArray(size,min,max)
+        // {
+        //     let arr = [];
+        //     for(let i =0;i<size;i++)
+        //     {
+        //         arr[i]=Math.floor(Math.random()*(max-min+1)+min);
+        //     }
+        //     return arr;
+        // }
+        // function printArray(arr,separator)
+        // {
+        //     return arr.join(separator);
+        // }
+        // function totalArray(arr)
+        // {
+        //     let total =0;
+        //     for(let i of arr)
+        //     {
+        //         total+=i;
+        //     }
+        //     return total;
+        // }
+        // function main()
+        // {
+        //     let size=enterNumber("Nhập vào size");
+        //     let arr = generateArray(size,10,90);
+        //     document.write(printArray(arr));
+        //     document.write("<br/>");
+        //     document.write(`Total value: ${totalArray(arr)}`);
+        // }
+        // main();
+
+
+
+
+
+        function myInput(msg) {
+            let number = 0;
+            do {
+                number = Number(prompt(`${msg}:`));
+            }
+            while (isNaN(number) || !Number.isSafeInteger(number) || number < 0);
+
+            return number;
+        }
+        function myArray(size, max, min) {
+            let arr = [];
+            for (let i = 0; i < size; i++) {
+                arr[i] = Math.floor(Math.random()*(max - min + 1) + min);
+            }
+            return arr;
+        }
+        function showMyArray(arr, separator) {
+            return arr.join(separator);
+        }
+        function myTotalArray(arr) {
+            let total = 0;
+            for (let item of arr) {
+                total += item;
+            }
+            return total;
+        }
+        
+        function main() {
+            let size = myInput("Nhập vào một số bất kỳ");
+            let arr = myArray(size, 90, 10);
+            document.write(showMyArray(arr,'-'));
+            document.write("<br>");
+            document.write(`Total of Array: ${myTotalArray(arr)}`);
+        }
+        main();
+
+ // 
     </script>
 </body>
 
